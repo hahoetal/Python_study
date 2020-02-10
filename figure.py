@@ -1,9 +1,10 @@
 num = int(input('세로 길이 : '))
 print()
+
 # 사각형
 for i in range(num):
     for j in range(num):
-        print('*', end = '')
+        print('*', end='')
     print()
     
 print()
@@ -12,9 +13,9 @@ print()
 for i in range(num):
     for j in range(num):
         if j <= i:
-            print('*', end = '')
+            print('*', end='')
         else:
-            print(' ', end = '')
+            print(' ', end='')
     print()
 
 print()
@@ -23,9 +24,9 @@ print()
 for i in range(num):
     for j in range(num):
         if i <= j:
-            print('*', end = '')
+            print('*', end='')
         else:
-            print(' ', end = '')
+            print(' ', end='')
     print()
 
 print()
@@ -33,9 +34,9 @@ print()
 #for i in range(num):
 #    for j in range(num):
 #        if j < i:
-#            print(' ', end = '')
+#            print(' ', end='')
 #        else:
-#            print('*', end = '')
+#            print('*', end='')
 #    print()
 
 # 사다리꼴
@@ -43,9 +44,9 @@ print()
 for i in range(num):
     for j in range(2 * num - 1):
         if j < (num - 1) - i:
-            print(' ', end = '')
+            print(' ', end='')
         else:
-            print('*', end = '')
+            print('*', end='')
     print()
     
 print()
@@ -55,10 +56,32 @@ print()
 for i in range(num):
     for j in range(2 * num - 1):
         if j < (num - 1) - i:
-            print(' ', end = '')
+            print(' ', end='')
         elif j >= (num + i):
-            print(' ', end = '')
+            print(' ', end='')
         else:
-            print('*', end = '')
+            print('*', end='')
     print()
 print()
+
+# 마름모
+
+for i in range(num // 2):
+    for j in range(num):
+        if j < (num // 2) - i:
+            print(' ', end='')
+        elif j > (num // 2) + i:
+            print(' ', end='')
+        else:
+            print('*', end='')
+    print()
+    
+for i in range(num - (num // 2)):
+    for j in range(num):
+        if j < i:
+            print(' ', end='')
+        elif j >= num - i:
+            print(' ', end='')
+        else:
+            print('*', end='')
+    print()
