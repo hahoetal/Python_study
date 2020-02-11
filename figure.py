@@ -64,7 +64,9 @@ for i in range(num):
     print()
 print()
 
-# 마름모
+# 마름모(홀수만)
+# 위에 산 모양, 아래 역삼각형으로 두 개로 쪼개서 만들어 봄.
+
 
 for i in range(num // 2):
     for j in range(num):
@@ -74,7 +76,7 @@ for i in range(num // 2):
             print(' ', end='')
         else:
             print('*', end='')
-    print()
+    print() # 산 모양
     
 for i in range(num - (num // 2)):
     for j in range(num):
@@ -84,4 +86,42 @@ for i in range(num - (num // 2)):
             print(' ', end='')
         else:
             print('*', end='')
+    print() # 역삼각형
+print()
+
+# 하트
+h = num
+w = num + 2
+
+for i in range(w):
+    if i == 0: 
+        print(' ', end='')
+    elif i == (w // 2) - 1:
+        print(' ', end='')
+    elif i == w // 2:
+        print(' ', end='')
+    elif i == (w // 2) + 1:
+        print(' ', end='')
+    elif i == w - 1:
+        print(' ', end='')
+    else:
+        print('*', end='')
+print()
+
+for i in range(w):
+    if i == w // 2:
+        print(' ', end='')
+    else:
+        print('*', end='')
+print()   
+
+for i in range(h - 2):
+    for j in range(w):
+        if j < i:
+            print(' ', end='')
+        elif j >= w - i:
+            print(' ', end='')
+        else:
+            print('*', end='')
     print()
+print()
